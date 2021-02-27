@@ -4,7 +4,6 @@ import axios from 'axios';
 import '../styles/listOfMembers.css'
 
 
-
 class ListOfMemebers extends Component{
 
 	constructor(props){
@@ -16,13 +15,13 @@ class ListOfMemebers extends Component{
 	}
 
 	componentDidMount(){
-		axios.get("http://localhost:8080/members")
+		axios.get("http://localhost:8080/member")
 		.then(response => {
 			console.log(response);
 			this.setState({members:response.data});
 		})
-		.catch(error => {
-			console.log(error);
+		.catch(errors => {
+			console.log(errors);
 		})
 
 	}
@@ -33,9 +32,10 @@ class ListOfMemebers extends Component{
 				<span id="label">MEMBERS</span>
 				{
 					members.length ?
-					members.map(member => <AMember key={member.id} name={member.firstName}/>)
+					members.map(member => <AMember key={member.id} name={member.firstName} id={member.id}/>)
 					:null
 				}
+				
 			</div>) ;
 	}
 }

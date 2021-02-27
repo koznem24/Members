@@ -1,0 +1,9 @@
+#closeButton{
+    color:#2FC4E9;
+    width: 20%;
+    
+}
+#closeButton:hover{
+    cursor: pointer;
+    color:white;
+}

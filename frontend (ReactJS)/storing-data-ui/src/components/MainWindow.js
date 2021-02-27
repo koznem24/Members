@@ -1,5 +1,4 @@
 import React,{Component} from 'react';
-import ListOfMembers from './ListOfMembers';
 import '../styles/mainWindow.css';
 import {Link} from 'react-router-dom';
 
